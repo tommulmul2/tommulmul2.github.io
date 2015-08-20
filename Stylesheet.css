@@ -8,8 +8,8 @@ body {
 }
 
 @animation clickPopUpAnim {
-	from {opacity: 1.0; transform: translate(0px, -50%);}
-	to {opacity: 0.0; transform :translate(0px,-150px);}
+	from {opacity: 1.0; transform: translate(-50%, 0px);}
+	to {opacity: 0.0; transform: translate(-50%, -150px);}
 }
 
 .clickPopUp {
