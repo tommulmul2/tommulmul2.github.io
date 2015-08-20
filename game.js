@@ -4,6 +4,7 @@ var firstClick = true;
 var firstUpgrade = true;
 var unlockedUpgrade = false;
 var upgradeCost = 100;
+var clickValue = 1;
 
 
 
@@ -50,6 +51,23 @@ function buttonClick() {
 
 	Points += 1;
 	update();
+
+	var clickPopUp = document.createElement("div");
+	var clickPopUpWorth = document.createTextNode("+" + clickValue);
+	var clickPopUpAtt = document.createAttribute("class");
+	var body = document.getElementById("mainDiv");
+	clickPopUpAtt.value = "clickPopUp unselectable default"
+	clickPopUp.appendChild(clickPopUpWorth);
+	clickPopUp.setAttributeNode(clickPopUpAtt);
+	var mouseX = event.clientX;
+	var mouseY = event.clientY;
+	clickPopUp.style.left = mouseX + "px";
+	clickPopUp.style.top = mouseY + "px";
+
+	
+
+	body.appendChild(clickPopUp);
+	setTimeout(function() {body.removeChild(clickPopUp)}, 2000);
 }
 
 function upgradeClick() {

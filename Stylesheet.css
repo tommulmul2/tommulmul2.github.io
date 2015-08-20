@@ -2,7 +2,25 @@ body {
 	font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
  }
 
+@-webkit-keyframes clickPopUpAnim {
+	from {opacity: 1.0; transform: translate(-50%, 0px);}
+	to {opacity: 0.0; transform: translate(-50%, -150px);}
+}
 
+@animation clickPopUpAnim {
+	from {opacity: 1.0; transform: translate(0px, -50%);}
+	to {opacity: 0.0; transform :translate(0px,-150px);}
+}
+
+.clickPopUp {
+	-webkit-animation-name: clickPopUpAnim;
+	-webkit-animation-duration: 2s;
+	animation-name: clickPopUpAnim;
+	animation-duration: 2s;
+	position: fixed;
+	pointer-events: none;
+
+}
 
 #PPS {
 	position: fixed;
