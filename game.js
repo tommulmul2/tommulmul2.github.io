@@ -67,6 +67,7 @@ function buttonClick() { //handles clicking on the button
 
 	Points += clickValue;
 	update();
+	makeClickpopUp();
 }
 
 function upgradeClick() { //handles purchasing an upgrade
