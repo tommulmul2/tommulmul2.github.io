@@ -2,21 +2,35 @@ body {
 	font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
  }
 
-@-webkit-keyframes clickPopUpAnim {
-	from {opacity: 1.0; transform: translate(-50%, 0px);}
-	to {opacity: 0.0; transform: translate(-50%, -150px);}
+@keyframes clickPopUpAnim {
+	0% {opacity: 1.0; transform: translate(-50%, -12px);}
+	100% {opacity: 0.0; transform: translate(-50%, -150px);}
 }
 
-@animation clickPopUpAnim {
-	from {opacity: 1.0; transform: translate(-50%, 0px);}
-	to {opacity: 0.0; transform: translate(-50%, -150px);}
+@-webkit-keyframes clickPopUpAnim {
+	0% {opacity: 1.0; transform: translate(-50%, -12px);}
+	100% {opacity: 0.0; transform: translate(-50%, -150px);}
 }
+
+@-o-keyframes clickPopUpAnim {
+	0% {opacity: 1.0; transform: translate(-50%, -12px);}
+	100% {opacity: 0.0; transform: translate(-50%, -150px);}
+}
+
+@-moz-keyframes clickPopUpAnim {
+	0% {opacity: 1.0; transform: translate(-50%, -12px);}
+	100% {opacity: 0.0; transform: translate(-50%, -150px);}
+}
+
 
 .clickPopUp {
-	-webkit-animation-name: clickPopUpAnim;
-	-webkit-animation-duration: 2s;
-	animation-name: clickPopUpAnim;
-	animation-duration: 2s;
+	animation: clickPopUpAnim 2s;
+	-webkit-animation: clickPopUpAnim 2s;
+	-moz-animation: clickPopUpAnim 2s;
+	-o-animation: clickPopUpAnim 2s;
+
+
+
 	position: fixed;
 	pointer-events: none;
 
